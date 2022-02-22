@@ -1,0 +1,29 @@
+﻿<!-- el tag helper asp-action define la acción a la cual se redireccionará el link -->
+<!-- Si no indicamos el controlador, este tomará en el que se ecuentra actualmente -->
+<a asp-action="Agregar" class="btn btn-primary">Agregar</a>
+<!-- class define los diseños en aplicados a un elemento CSS -->
+<!-- class se puede seleccionar varios elementos con la misma clase JS -->
+<table class="table mt-3">
+    <!-- Define la cabecera de una tabla -->
+    <thead>
+        <tr>
+            <!-- define la columna de la cabecera de la tabla -->
+            <th>ID</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <!-- Contiene el cuerpo de la table -->
+    <tbody>
+        <!-- foreach recorre la lista actividades del ViewBag -->
+        @foreach(Listado.Models.Actividad item in ViewBag.Actividades)
+        {
+            <!-- Dibuja las filas y columnas de cada item -->
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Estado</td>
+            </tr>
+        }
+    </tbody>
+</table>
