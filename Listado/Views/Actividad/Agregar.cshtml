@@ -6,7 +6,11 @@
             <!-- Aquí empieza la sección del control -->
             <div class="form-group">
                 <label>ID</label>
-                <input type="number" 
+                <!-- required vuelve obligatorio el campo -->
+                <!-- autofocus le da el foco de forma automática
+                    al elemento indicado 
+                    (solo puede existir un autofocus)                -->
+                <input type="number" required autofocus
                     name="ID" class="form-control" />
             </div>
             <!-- Aqui termina la sección de control -->
@@ -14,12 +18,12 @@
                 <label>Descripción</label>
                 <!-- Textarea es un control de texto, para 
                     multiples lineas -->
-                <textarea name="Descripcion" 
+                <textarea name="Descripcion" required
                 class="form-control"></textarea>
             </div>
             <div class="form-group">
                 <label>Estado</label>
-                <select class="form-control">
+                <select required name="Estado" class="form-control">
                     <option value="">Selecciona una opción</option>
                     <option value="1">Activo</option>
                     <option value="2">Completo</option>

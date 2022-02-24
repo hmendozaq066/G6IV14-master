@@ -21,5 +21,21 @@ namespace Listado.Controllers
         {
             return View();
         }
+
+        //Aquí se indica que el siguiente método es llamado cuando
+        //la página envía los datos por POST, sino se indica el método
+        //es GET
+        [HttpPost]
+        public IActionResult Agregar(int ID, 
+            string Descripcion, int Estado)
+        {
+            //Declarando una instancia de tipo Actividad que se llama item
+            var item = new Actividad();
+            item.ID = ID;
+            item.Descripcion = Descripcion;
+            item.Estado = Estado;
+            _actividades.Add(item);
+            return RedirectToAction("Index");
+        }
     }
 }
