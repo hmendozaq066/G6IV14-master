@@ -27,13 +27,14 @@ namespace Listado.Controllers
         //es GET
         [HttpPost]
         public IActionResult Agregar(int ID, 
-            string Descripcion, int Estado)
+            string Descripcion, int Estado, int Prioridad)
         {
             //Declarando una instancia de tipo Actividad que se llama item
             var item = new Actividad();
             item.ID = ID;
             item.Descripcion = Descripcion;
             item.Estado = Estado;
+            item.Prioridad = Prioridad;
             _actividades.Add(item);
             return RedirectToAction("Index");
         }

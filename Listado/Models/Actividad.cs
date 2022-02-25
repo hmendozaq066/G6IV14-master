@@ -9,6 +9,8 @@ namespace Listado.Models
         public string Descripcion { get; set; }
         public int Estado { get; set; }
 
+        public int Prioridad { get; set; }// 1 Normal 2 Media 3 Urgente
+
         public string GetEstado()
         {
             switch (Estado)
@@ -19,6 +21,19 @@ namespace Listado.Models
                     return "Completo";
                 default:
                     return "Cancelado";
+            }
+        }
+
+        public string GetPrioridad()
+        {
+            switch (Prioridad)
+            {
+                case 1:
+                    return "Normal";
+                case 2:
+                    return "Medio";
+                default:
+                    return "Urgente";
             }
         }
 

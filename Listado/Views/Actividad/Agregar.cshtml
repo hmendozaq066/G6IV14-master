@@ -30,6 +30,15 @@
                     <option value="3">Cancelado</option>
                 </select>
             </div>
+             <div class="form-group">
+                <label>Prioridad</label>
+                <select required name="Prioridad" class="form-control">
+                    <option value="">Selecciona una opción</option>
+                    <option value="1">Normal</option>
+                    <option value="2">Media</option>
+                    <option value="3">Urgente</option>
+                </select>
+            </div>
             <input type="submit" value="Agregar" class="btn btn-outline-secondary" />
             <a asp-action="Index" class="btn btn-link">Cancelar</a>
         </form>

@@ -11,6 +11,7 @@
             <th>ID</th>
             <th>Descripción</th>
             <th>Estado</th>
+            <th>Prioridad</th>
         </tr>
     </thead>
     <!-- Contiene el cuerpo de la table -->
@@ -23,6 +24,7 @@
                 <td>@item.ID</td>
                 <td>@item.Descripcion</td>
                 <td>@item.GetEstado()</td>
+                <td>@item.GetPrioridad()</td>
             </tr>
         }
     </tbody>
